@@ -1,0 +1,41 @@
+body{
+   font-family: 'Courier New', Courier, monospace;
+   font-size: large;
+   margin-left: 1.5rem;
+}
+
+.chartBox{
+  background-color: rgb(117, 172, 226);
+   border-radius: .6rem;
+   box-shadow: 0px 4px 6px rgb(202, 215, 228);
+   gap: .4rem;
+   display: inline-block;
+   padding: 2rem;
+} 
+.chartBox form{
+  margin-top: .6rem;
+}
+.msg{
+  background-color: rgb(13, 124, 116);
+  color: white;
+  border-radius: .6rem;
+  padding: 1rem;
+}
+.sendMsg{
+  height: 15rem;
+  width: 15rem;
+  background-color: rgb(84, 158, 223);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+}
+.sendMsg button{
+  width: 5rem;
+  background-color: rgb(13, 124, 116);
+  border-radius: .5rem;
+}
+.sendMsg input{
+  border-radius: .4rem;
+}

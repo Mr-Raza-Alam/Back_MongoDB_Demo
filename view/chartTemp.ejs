@@ -1,0 +1,37 @@
+<!-- chart show template for client site -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Whatsapp</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/whatsappLogo.png">
+</head>
+<body>
+   <h2>Whatsapp charts</h2>
+   <form  method ="get" action="http://localhost:5400/chats/new" id = "newChat">
+    <button id="chatBtn">New Chat</button>
+  </form>
+
+   <% for(let c of chats){ %>
+    <div class="chartBox">
+       <p>From : <i> <%= c.from %></i></p>
+      <div class="msg">
+        <%= c.msg %>
+       <form method="get" action="/chat/<%= c._id %>/edit" class="editChat">
+        <button id="editBtn">Edit</button>
+       </form>
+       <form method="post" action="/chat/<%= c._id %>?_method=Delete" class="delChat">
+        <button id="delBtn">delete</button>
+       </form>
+      </div>
+       <p>Received by  : <i> <%= c.to  %></i></p> <hr>
+       <p>Time : <%=c.created_At.toString().split(" ")[4]%></p>
+       <p>Day : <%=c.created_At.toString().split(" ")[0]%></p>
+       <p>Date : <%=c.created_At.toString().split(" ").slice(1,4).join("-")%></p>
+ 
+    </div> <hr>
+  <% } %>
+</body>
+</html>

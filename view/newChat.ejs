@@ -1,0 +1,20 @@
+<!-- create a form for new chat of mini whatsapp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new chat</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/whatsappLogo.png">
+</head>
+<body>
+    <h3>Write your new chats here!!...</h3>
+    <form class="sendMsg" method="post" action="http://localhost:5400/chat">
+    <input type="text" placeholder="who are you?" name="from">
+     <textarea name="msg" id="msg"></textarea>
+     <input type="text" placeholder="whom to send" name="to">
+     <button id="sendBtn">Send</button>
+  </form>
+</body>
+</html>
