@@ -25,6 +25,9 @@
        <form method="post" action="/chat/<%= c._id %>?_method=Delete" class="delChat">
         <button id="delBtn">delete</button>
        </form>
+       <form method="get" action="/chats/<%= c._id %>" class="delChat">
+        <button id="showBtn">Show</button>
+       </form>
       </div>
        <p>Received by  : <i> <%= c.to  %></i></p> <hr>
        <p>Time : <%=c.created_At.toString().split(" ")[4]%></p>
